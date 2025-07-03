@@ -1,3 +1,65 @@
+# 📊 MLProject: Student Performance Indicator
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![MLflow](https://img.shields.io/badge/MLflow-Tracking-blue)
+![CatBoost](https://img.shields.io/badge/CatBoost-Model-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A robust, end-to-end machine learning pipeline to predict student performance based on demographic and educational features. This project demonstrates best practices in data ingestion, transformation, model training, experiment tracking, and reproducibility.
+
+---
+
+## 📚 Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data & Artifacts](#data--artifacts)
+- [Experiment Tracking](#experiment-tracking)
+- [Notebooks](#notebooks)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## 🚀 Features
+- **Data Ingestion**: Pulls data from a MySQL database and splits into train/test sets.
+- **Data Transformation**: Handles missing values, encodes categorical features, and scales numerical features.
+- **Model Training**: Trains and evaluates multiple regression models (CatBoost, XGBoost, Random Forest, etc.) with hyperparameter tuning.
+- **Experiment Tracking**: Uses MLflow for experiment logging and model registry.
+- **Reproducibility**: All steps are modular and tracked; artifacts are versioned.
+- **Notebooks**: EDA and model training notebooks for exploration and demonstration.
+
+---
+
+## 🗂 Project Structure
+```
+mlproject/
+│   app.py                # Main pipeline runner
+│   main.py               # (Reserved for CLI/API entry)
+│   requirements.txt      # Python dependencies
+│   Dockerfile            # (Optional) Docker support
+│   setup.py              # (Optional) Install as package
+│
+├── artifacts/            # Data & model artifacts
+│   ├── train.csv, test.csv, model.pkl, preprocessor.pkl
+│
+├── src/mlproject/
+│   ├── components/       # Pipeline components
+│   │   ├── data_ingestion.py
+│   │   ├── data_transformation.py
+│   │   ├── model_trainer.py
+│   │   └── model_monitering.py
+│   ├── pipelines/        # (Reserved for pipeline scripts)
+│   ├── utils.py, logger.py, exception.py
+│
+├── notebook/             # Jupyter notebooks (EDA, training)
+│   ├── EDASP.ipynb
+│   └── 2. MODEL TRAINING.ipynb
+└── ...
+```
+
+---
 
 ## ⚙️ Installation
 1. **Clone the repository:**
@@ -72,13 +134,6 @@ Contributions are welcome! Please open issues or pull requests for improvements,
 
 ## 📝 License
 This project is licensed under the MIT License.
-
----
-
-## 📬 Contact
-- **Author:** Manav Chopra
-- **Email:** [your-email@example.com]
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/)
 
 ---
 
